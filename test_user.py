@@ -9,4 +9,9 @@ class TestUser(unittest.TestCase):
     Args:
         unittest.TestCase: TestCase class that helps in creating test cases
     '''
-    
+def setUp(self):
+        '''
+        Set up method to run before each test cases.
+        '''
+        self.new_user =user("Claudia","1234") # create user object
+   
