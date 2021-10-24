@@ -22,4 +22,17 @@ def test_init(self):
 
         self.assertEqual(self.new_user.user_name,"Claudia")
         self.assertEqual(self.new_user.password,"1234")
+
+def test_save_user(self):
+        '''
+        test_save_user test case to test if the user object is saved into
+         the user
+        '''
+        self.new_user.save_user() # saving the new user
+        self.assertEqual(len(user.user_list),1)
+        
+        
+
+if __name__ == '__main__':
+    unittest.main()
   
