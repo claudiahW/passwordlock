@@ -48,3 +48,47 @@ class User:
             if user.username == number:
                 return True
                 return False
+class Details:
+    """
+    Class that generates new details.
+    """
+    accounts=[]
+    def __init__(self,accountusername,accountname,accountpassword):
+        """
+        __init__ method that helps us define properties for the self object.
+        Args:
+        accountusername: New Details accountusername
+        accountname: New Details accountname
+        accountpassword: New Details accountpassword
+        """
+        self.accountusername= accountusername
+        self.accountname = accountname
+        self.accountpassword = accountpassword
+    def save_account(self):
+        """
+        save_account saves user into accounts
+        """
+        Details.accounts.append(self)
+    def delete_account(self):
+        """
+        delete_account deletes a saved Detail from accounts
+        """
+        Details.accounts.remove(self)
+    #Changes made here that might affect code
+    @classmethod
+    def display_accounts(cls):
+        """
+        display_account returns the accounts
+        """
+        for account in cls.accounts:
+            return cls.accounts
+    @classmethod
+    def find_by_number(cls,number):
+        """
+        find_by_number takes in a number and returns a contact that matches that number
+        Args:
+        number: accountusername to search for Returns: Details of the user who matches the number.
+        """
+        for account in cls.accounts:
+            if account.accountusername ==number:
+                return account
