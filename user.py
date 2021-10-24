@@ -26,3 +26,25 @@ class User:
         delete_user deletes a saved user from the userslist.
         """
         User.userslist.remove(self)
+    @classmethod
+    def display_users(cls):
+        """
+        display_user returns the userlist.
+        """
+        return cls.userslist
+    @classmethod
+    def find_by_number(cls,number):
+        """
+        Takes in username and returns a user that matches the phone number.
+        Args:
+        number: Phone number Returns: Contact of person that matches the number.
+        """
+        for user in cls.userslist:
+            if user.password == number:
+                return user
+    @classmethod
+    def user_exist(cls,number):
+        for user in cls.userslist:
+            if user.username == number:
+                return True
+                return False
