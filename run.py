@@ -20,3 +20,9 @@ def save_account(user):
 def delete_account(user):
     user.delete_account()
 def find_account(number):
+    return Details.find_by_number(number)
+def display_accounts():
+    return Details.display_accounts()
+def main():
+        while True:
+            
